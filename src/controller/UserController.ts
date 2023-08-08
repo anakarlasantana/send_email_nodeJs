@@ -1,53 +1,25 @@
 import { AppDataSource } from "../data-source"
-import { NextFunction, Request, Response } from "express"
+import { Request, Response } from "express"
 import { User } from "../entity/User"
+import * as bcrypt from 'bcrypt'
 
-export class UserController {
+export const saveUser = async (request:Request, response: Response) => {
 
-    private userRepository = AppDataSource.getRepository(User)
+    const { name, email, password} = request.body
+    
+    try {
+        const passwordHash = await bcrypt.hash(password, 8)
 
-    async all(request: Request, response: Response, next: NextFunction) {
-        return this.userRepository.find()
+        const userRepo = AppDataSource.getRepository(User); 
+        const user = await userRepo.save({
+            name,
+            email,
+            password: passwordHash,
+        });
+
+        return response.status(201).json({messagem: 'Usuário criado com sucesso!!', user});
+
+    } catch (error) {
+        response.status(422).json({ error: "Erro nas entidades!" });
     }
-
-    async one(request: Request, response: Response, next: NextFunction) {
-        const id = parseInt(request.params.id)
-
-
-        const user = await this.userRepository.findOne({
-            where: { id }
-        })
-
-        if (!user) {
-            return "unregistered user"
-        }
-        return user
-    }
-
-    async save(request: Request, response: Response, next: NextFunction) {
-        const { firstName, lastName, age } = request.body;
-
-        const user = Object.assign(new User(), {
-            firstName,
-            lastName,
-            age
-        })
-
-        return this.userRepository.save(user)
-    }
-
-    async remove(request: Request, response: Response, next: NextFunction) {
-        const id = parseInt(request.params.id)
-
-        let userToRemove = await this.userRepository.findOneBy({ id })
-
-        if (!userToRemove) {
-            return "this user not exist"
-        }
-
-        await this.userRepository.remove(userToRemove)
-
-        return "user has been removed"
-    }
-
 }
