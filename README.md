@@ -1,9 +1,11 @@
 # Diário da DEV:
 - Com a depreciação do método getRepository pelo TypeORM, adaptei o server para aceitar a nova forma de adaptação ao banco atraves do AppDataSource.
+- Uso da ferramenta online Mailtrap para testar o envio de emails em ambientes de desenvolvimento.
 
 # Bibliotecas usadas:
 - Nodemon
-- node.bcrypt.js
+- Bcrypt
 - Express
 - Cors
 - Typeorm
+- Mailtrap

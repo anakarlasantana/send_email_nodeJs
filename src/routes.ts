@@ -1,6 +1,6 @@
 import {Router, Request, Response} from 'express'
 
-import { saveUser} from './controller/UserController'
+import { saveUser, login, forgotPassword,} from './controller/UserController'
 
 const routes = Router()
 
@@ -9,5 +9,9 @@ routes.get('/', (request: Request, response: Response) => {
 })
 
 routes.post('/users', saveUser);
+routes.post('/login', login);
+routes.post('/forgot_password', forgotPassword);
+
+
 
 export default routes;
