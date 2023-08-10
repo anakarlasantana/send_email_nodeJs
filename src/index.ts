@@ -1,9 +1,11 @@
 import express = require("express");
 import routes from "./routes";
 import { AppDataSource } from "./data-source"; 
+import cors = require("cors");
 
 const app = express()
 
+app.use(cors()); // Adicione o middleware cors
 app.use(express.json())
 app.use(routes)
 
