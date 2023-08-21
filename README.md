@@ -20,6 +20,7 @@ Express
 TypeORM + PostgreSQL
 Bcrypt
 Nodemon
+Cors
 Email sending with Nodemailer
 Ethereal Email of test
 
