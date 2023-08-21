@@ -1,2 +1,2 @@
-export const EMAIL_USER = 'anakarladesantana@gmail.com';
-export const EMAIL_PASSWORD = 'anakapesa';
+export const EMAIL_USER = 'santanaanakarla@gmail.com';
+export const EMAIL_PASSWORD = 'azeevdzvizuqqgyr';

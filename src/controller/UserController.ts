@@ -4,6 +4,7 @@ import { User } from "../entity/User";
 import * as bcrypt from 'bcrypt';
 import * as nodemailer from 'nodemailer';
 import * as crypto from 'crypto';
+import { EMAIL_USER, EMAIL_PASSWORD } from "../../env";
 
 export const saveUser = async (request: Request, response: Response) => {
 
@@ -75,8 +76,8 @@ export const forgotPassword = async (request: Request, response: Response) => {
             host: 'smtp.gmail.com',
             port: 465,
             auth: {
-                user: 'santanaanakarla@gmail.com',
-                pass: 'azeevdzvizuqqgyr',
+                user: EMAIL_USER,
+                pass: EMAIL_PASSWORD,
             }
             });
 
