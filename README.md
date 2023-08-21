@@ -13,16 +13,16 @@ You can check the repositories here:
 
 React Web Frontend Repository
 
-# 🚀 Technologies in the API
-Typescript
-NodeJS
-Express
-TypeORM + PostgreSQL
-Bcrypt
-Nodemon
-Cors
-Email sending with Nodemailer
-Ethereal Email of test
+# 🚀 Technologies in the API:
+- Typescript
+- NodeJS
+- Express
+- TypeORM + PostgreSQL
+- Bcrypt
+- Nodemon
+- Cors
+- Email sending with Nodemailer
+- Ethereal Email of test
 
 # 📖 DEV Diary:
 - With the depreciation of the getRepository method by TypeORM, I adapted the server to accept the new way of adapting to the database through the AppDataSource.
