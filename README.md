@@ -3,7 +3,7 @@
 ![Alt text](image.png)
 
 # 📔 About
-API developed to be used by an application for login, with possible add user and password recuperation.
+API developed to be used by an application for login, with possible add users and password recuperation.
 
 # 💻 Is it running?
 Yes! It is live and running and you can see it working behind the scenes by testing the web frontend. 😃
