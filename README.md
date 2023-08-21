@@ -29,7 +29,7 @@ Continuous Deployment to a Digital Ocean droplet with Github Actions
 - Use of the Ethereal Email online tool to test sending emails in development environments.
 
 # The author
-Made with ❤️ by ANa Karla Santana. 🇧🇷
+Made with ❤️ by Ana Karla Santana. 🇧🇷
 
 Get in touch! 😃
 
