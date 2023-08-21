@@ -9,3 +9,4 @@
 - Cors
 - Typeorm
 - Ethereal Email
+- Nodemailer

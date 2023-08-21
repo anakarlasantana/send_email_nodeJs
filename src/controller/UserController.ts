@@ -72,23 +72,25 @@ export const forgotPassword = async (request: Request, response: Response) => {
         });
 
         const transporter = nodemailer.createTransport({
-            host: 'smtp.ethereal.email',
-            port: 587,
+            host: 'smtp.gmail.com',
+            port: 465,
             auth: {
-                user: 'damion.thiel44@ethereal.email',
-                pass: 'snraMvbNqNJtSMsrhx'
+                user: 'santanaanakarla@gmail.com',
+                pass: 'azeevdzvizuqqgyr',
             }
             });
 
         const newPassword = crypto.randomBytes(4).toString("hex");
 
         transporter.sendMail({
-            from: 'Administrador <c0c993106b-e02306@inbox.mailtrap.io>',
+            from: 'Ana Karla <c0c993106b-e02306@inbox.mailtrap.io>',
             to: email,
             subject: 'Recuperação de senha!',
-            text: `Olá,
-            Parece que você solicitou a recuperação de senha para a sua conta em nosso sistema. 
-            Para garantir a segurança de sua conta, sua nova senha para acessar o sistema é: ${newPassword}.`
+            html: `
+            <p>Olá,</p>
+            <p>Parece que você solicitou a recuperação de senha para a sua conta em nosso sistema.</p>
+            <p>Para garantir a segurança de sua conta, sua nova senha para acessar o sistema é: <strong>${newPassword}</strong>.</p>
+        `
         }).then(
             () => {
                 bcrypt.hash(newPassword, 8).then(
