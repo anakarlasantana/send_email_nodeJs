@@ -1,26 +1,24 @@
 {
-    "type": "postgres",
-    "host": "containers-us-west-43.railway.app",
-    "port": 6015,
-    "username": "postgres",
-    "password": "lL6yUMjEW9wMTegyM4Ef",
-    "database": "railway",
-    "synchronize": true,
-    "logging": true,
-    "entities": [
+  "type": "postgres",
+  "host": "containers-us-west-43.railway.app",
+  "port": 6015,
+  "username": "postgres",
+  "password": "lL6yUMjEW9wMTegyM4Ef",
+  "database": "railway",
+  "synchronize": true,
+  "logging": true,
+  "entities": [
       "src/entities/**/*.ts"
-    ],
-    "migrations": [
+  ],
+  "migrations": [
       "src/migrations/**/*.ts"
-    ],
-    "subscribers": [
+  ],
+  "subscribers": [
       "src/subscribers/**/*.ts"
-    ],
-    "cli": {
-      "entitiesDir": "src/entity",
-      "migrations": "src/migration",
+  ],
+  "cli": {
+      "entitiesDir": "src/entities",
+      "migrationsDir": "src/migrations",
       "subscribersDir": "src/subscribers"
-
-    }
   }
-  
+}

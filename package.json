@@ -29,8 +29,9 @@
       "build": "tsc",
       "start": "node build/index.js",
       "typeorm": "typeorm-ts-node-commonjs",
-      "deploy": "yarn build && yarn typeorm migration:run && yarn start"
-
+      "deploy": "yarn build && yarn migration:run && yarn start",
+      "migration:run": "yarn typeorm migration:run --dataSource src/data-source.ts",
+      "migration:revert": "yarn typeorm migration:revert --dataSource src/data-source.ts"
    },
    "main": "index.js",
    "repository": "https://github.com/anakarlasantana/send_email_NodeJs.git",
