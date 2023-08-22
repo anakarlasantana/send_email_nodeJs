@@ -29,8 +29,8 @@
       "build": "tsc",
       "start": "node dist/index.js",
       "typeorm": "typeorm-ts-node-commonjs",
-      "deploy": "yarn build && yarn migration:run --dataSource src/data-source.ts && yarn start"
-   },
+      "migrate:deploy": "yarn build && yarn typeorm migration:run --dataSource src/data-source.ts && yarn start"
+    },
    "main": "index.js",
    "engines": {
       "node": "19"
