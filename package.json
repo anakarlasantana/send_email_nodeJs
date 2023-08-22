@@ -29,6 +29,7 @@
       "build": "yarn build && yarn typeorm migration:run && yarn start",
       "start": "node build/index.js",
       "typeorm": "typeorm-ts-node-commonjs",
+      "vercel_build": "yarn typeorm migration:run --dataSource src/data-source.ts",
       "deploy": "yarn build && yarn migration:run && yarn start",
       "migration:run": "yarn typeorm migration:run --dataSource src/data-source.ts",
       "migration:revert": "yarn typeorm migration:revert --dataSource src/data-source.ts"
