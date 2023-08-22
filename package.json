@@ -32,9 +32,6 @@
       "migrate:deploy": "yarn build && yarn typeorm migration:run --dataSource src/data-source.ts && yarn start"
     },
    "main": "index.js",
-   "engines": {
-      "node": "18.x.x"
-    },
    "repository": "https://github.com/anakarlasantana/send_email_NodeJs.git",
    "author": "Ana Karla Santana",
    "license": "MIT"
