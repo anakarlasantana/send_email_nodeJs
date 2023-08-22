@@ -9,14 +9,15 @@ app.use(cors());
 app.use(express.json())
 app.use(routes)
 
+const port = process.env.PORT || 8888; // Use a porta atribuída pelo Netlify ou 8888 por padrão
+
 AppDataSource
   .initialize()
   .then(() => {
     console.log("Conexão com o banco de dados estabelecida");
     
-    // Inicie o servidor Express
-    app.listen(8888, () => {
-      console.log("Servidor Express iniciado");
+    app.listen(port, () => {
+      console.log(`Servidor Express iniciado na porta ${port}`);
     });
   })
   .catch(error => {
