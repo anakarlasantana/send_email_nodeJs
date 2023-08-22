@@ -33,8 +33,8 @@
     },
    "main": "index.js",
    "engines": {
-      "node": "19"
-   },
+      "node": "18.x.x"
+    },
    "repository": "https://github.com/anakarlasantana/send_email_NodeJs.git",
    "author": "Ana Karla Santana",
    "license": "MIT"
