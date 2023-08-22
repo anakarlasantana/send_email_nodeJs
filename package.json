@@ -26,7 +26,7 @@
    },
    "scripts": {
       "dev": "nodemon src/index.ts",
-      "build": "tsc",
+      "build": "yarn build && yarn typeorm migration:run && yarn start",
       "start": "node build/index.js",
       "typeorm": "typeorm-ts-node-commonjs",
       "deploy": "yarn build && yarn migration:run && yarn start",
