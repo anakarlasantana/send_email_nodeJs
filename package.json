@@ -28,7 +28,9 @@
       "dev": "nodemon src/index.ts",
       "build": "tsc",
       "start": "node build/index.js",
-      "typeorm": "typeorm-ts-node-commonjs"
+      "typeorm": "typeorm-ts-node-commonjs",
+      "deploy": "npm run build && npm run typeorm && npm run start"
+
    },
    "main": "index.js",
    "repository": "https://github.com/anakarlasantana/send_email_NodeJs.git",
