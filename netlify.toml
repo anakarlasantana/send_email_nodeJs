@@ -1,5 +1,5 @@
 [build]
-  command = "yarn migrate:deploy" 
+  command = "yarn build" 
   publish = "dist"  
 
 [[redirects]]
